@@ -1,37 +1,39 @@
-[![Build Status](https://travis-ci.org/vergecurrency/VERGE.svg?branch=master)](https://travis-ci.org/vergecurrency/VERGE)
+<p align="center"><img src="https://raw.githubusercontent.com/vergecurrency/VERGE/master/readme-header.png" alt="Verge Source Code"></p>
+<p align="center">
+  <a href="https://circleci.com/gh/vergecurrency/VERGE/tree/master" target="_blank"><img src="https://circleci.com/gh/vergecurrency/VERGE/tree/master.svg?style=svg"></a>
+  <img src="https://img.shields.io/badge/status-beta-yellow.svg">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg">
+  <a href="https://codecov.io/gh/vergecurrency/VERGE">
+    <img src="https://codecov.io/gh/vergecurrency/VERGE/branch/develop/graph/badge.svg" />
+  </a>
+</p>
 
-
-```
-____   _________________________   ________ ___________
-\   \ /   /\_   _____/\______   \ /  _____/ \_   _____/
- \   Y   /  |    __)_  |       _//   \  ___  |    __)_
-  \     /   |        \ |    |   \\    \_\  \ |        \ 2018 VERGE/XVG
-   \___/   /_______  / |____|_  / \______  //_______  /
-                   \/         \/         \/         \/
-```
-
-# VERGE [XVG] Source Code
+# VERGE Source Code [XVG]
 
 ## Specifications
+Specification | Value
+--- | ---
+Protocol | PoW (proof of Work)
+Algorithms | scrypt, x17, Lyra2rev2, myr-groestl, & blake2s
+Blocktime | 30 seconds
+Total Supply | 16,500,000,000 XVG
+RPC port | 20102
+P2P port | 21102
+pre-mine | N/A
+ICO | N/A
 
-* PoW (proof of work)
-* Algorithms: scrypt, x17, Lyra2rev2, myr-groestl, & blake2s
-* Blocktime: 30 seconds
-* Total Supply: 16.5 Billion XVG
-* No pre-mine
-* No ICO
-* Blockreward:
-  * Block 0 to 14,000 : 200,000 coins
-  * 14,000 to 28,000 : 100,000 coins
-  * 28,000 to 42,000: 50,000 coins
-  * 42,000 to 210,000: 25,000 coins
-  * 210,000 to 378,000: 12,500 coins
-  * 378,000 to 546,000: 6,250 coins
-  * 546,000 to 714,000: 3,125 coins
-  * 714,000 to 2,124,000: 1,560 coins
-  * 2,124,000 to 4,248,000: 730 coins
-* RPC port: `20102`
-* P2P port: `21102`
+## Blockrewards
+Block Number | Reward
+--- | ---
+0 to 14,000 | 200,000 coins
+14,000 to 28,000 | 100,000 coins
+28,000 to 42,000 | 50,000 coins
+42,000 to 210,000 | 25,000 coins
+210,000 to 378,000 | 12,500 coins
+378,000 to 546,000 | 6,250 coins
+546,000 to 714,000 | 3,125 coins
+714,000 to 2,124,000 | 1,560 coins
+2,124,000 to 4,248,000 | 730 coins
 
 ## Resources
 
@@ -91,9 +93,9 @@ Binary (pre-compiled) wallets are available on all platforms at [https://vergecu
 
 > **Note:** If you want to change your configuration the file is located at `~/Library/Application\ Support\VERGE\VERGE.conf`. This isn't required by default.
 
-### Linux Wallet
+### Unix Wallet
 
-1. Compile using [linux instructions](doc/build-verge-linux.md).
+1. Compile using [Unix instructions](doc/build-unix.md).
 2. The wallet GUI is in `./verge/src/qt` and the daemon in `./verge/src`.
 3. **Optional** - the binaries to your favorite location. for use by all users, run the following commands:
 
@@ -136,9 +138,9 @@ You can also check out this [Linux Wallet Video Tutorial](https://www.youtube.co
 
 ## Building From Source
 
-* [Linux Instructions](doc/build-verge-linux.md)
-* [OS X Instructions](doc/build-verge-osx.md)
-* [Windows Instructions](doc/build-verge-win.md)
+* [Unix Instructions](doc/build-unix.md)
+* [OS X Instructions](doc/build-osx.md)
+* [Windows Instructions](doc/build-windows.md)
 
 ## Developer Notes
 
@@ -170,7 +172,7 @@ The _slightly_ longer version:
 2. Clone the git repository and compile the daemon and gui wallet:
 
     ```shell
-    git clone https://github.com/vergecurrency/verge && cd verge && ./autogen.sh && ./configure && make
+    git clone https://github.com/vergecurrency/VERGE && cd VERGE && ./autogen.sh && ./configure && make
     ```
 
 > **Note**: If you get a "memory exhausted" error, make a swap file. (https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04)
@@ -218,7 +220,7 @@ The _slightly_ longer version:
 
 ### Windows Wallet
 
-TODO. Take a look as [building/windows](./building/windows).
+TODO. Take a look at [building/windows](./building/windows).
 
 ## Docker Images
 
@@ -260,3 +262,25 @@ Special thanks to the following people that have helped make Verge possible. :ra
 
 Sunerok, CryptoRekt, MKinney, BearSylla, Hypermist, Pallas1, FuzzBawls, BuZz, glodfinch, InfernoMan, AhmedBodi, BitSpill, MentalCollatz, ekryski and the **entire** #VERGE community!
 
+
+
+
+# Bug Reporting
+
+If you think you've found a bug or a problem with VERGE, please let us know! First, search our issue tracker to see if someone has already reported the problem. If they haven't, open a new issue, and fill out the template with as much information as possible. The more you can tell us about the problem and how it occurred, the more likely we are to fix it.
+
+## _Please do not report security vulnerabilities publicly._
+
+
+## How to report a bug
+
+### Code issues
+
+Since we are a 100% open-source project we strongly prefer if you create a pull-request on Github in the proper repository with the necessary fix.
+
+Alternatively, if you would like to make a suggestion regarding a potential fix please send an email to contact@vergecurrency.com
+
+
+### Security-related issues
+
+Contact the developers privately by sending an e-mail to contact@vergecurrency.com with the details of the issue. Do not post the issue on github or anywhere else until the issue has been resolved.
